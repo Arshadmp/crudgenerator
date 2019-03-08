@@ -168,10 +168,17 @@ class CrudGeneratorService
         Artisan::call('make:model', ['name' => $modelname]);
 
         $columns = $this->getColumns($prefix.($table_name ?: strtolower(str_plural($modelname))));
+         
+        $cc = collect($columns);
 
-        
+        if(!$cc->contains('name', 'updated_at') || !$cc->contains('name', 'created_at')) { 
+            $this->appendToEndOfFile(app_path().'/'.$modelname.'.php', "    public \$timestamps = false;\n\n}", 2, true);
+        }
 
+        $this->output->info('Model created, columns: '.json_encode($columns));
         return $columns;
+
+       
     }
 
 
