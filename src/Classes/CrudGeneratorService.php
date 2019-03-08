@@ -175,7 +175,7 @@ class CrudGeneratorService
             $this->appendToEndOfFile(app_path().'/'.$modelname.'.php', "    public \$timestamps = false;\n\n}", 2, true);
         }
 
-        $this->output->info('Model created, columns: '.json_encode($columns));
+       
         return $columns;
 
        
