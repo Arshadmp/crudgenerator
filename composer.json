@@ -1,0 +1,15 @@
+{
+	"name": "arshad/crudgenerator",
+	"authors": [
+		{
+			"name": "arshad",
+			"email": "arshadmp@ndimensionz.com"
+		}
+	],
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Arshad\\CrudGenerator\\": "src/"
+		}
+	}
+}
