@@ -1,5 +1,7 @@
 
+@extends('crudgenerator::layout')
 
+@section('content')
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -39,3 +41,5 @@
       alert(msg);
     }
   </script>
+  @endsection
+
