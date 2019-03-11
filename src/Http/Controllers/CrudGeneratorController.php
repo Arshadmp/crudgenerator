@@ -126,7 +126,7 @@ class CrudGeneratorController extends Controller
 	 */
     public function view()
 	{  
-		return view('crudgenerator.home');
+		return view('crudgenerator::crudgenerator.home');
 
 	}
 
