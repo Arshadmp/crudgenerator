@@ -1,5 +1,4 @@
-@extends('layout')
-
+@extends('crudgenerator::layout')
 
 @section('content')
 	<style >
